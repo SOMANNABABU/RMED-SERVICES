@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Contact | RMed</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.1.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#icon').click(function(){
+                $('ul').toggleClass('show');
+            });
+        });
+    </script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+</head>
+<body>
+    <nav>
+        <label class="logo">RMED SERVICES</label>
+        <ul>
+            <li><a class="activa" href="index.html">HOME</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">services</a></li>
+            <li><a href="contact.html">contact</a></li>
+        </ul>
+        <label id="icon">
+            <i class="fas fa-bars"></i>
+        </label>
+    </nav>
+<!-- contact section starts here -->
+<div class="container contac">
+	<div class="row">
+		<div class="col-md-12">
+			<h1>
+				CONTACT
+			</h1>
+			<p class="paragr">
+				Every client is linked up with a dedicated account manager. Your account manager will look after all your equipment needs and more. When service need arises your team can always reach your own RMS account manager who is completely aware of your equipment and the environment to dispatch the right personal in shortest response time.
+			</p>
+			<form role="form" action="https://formsubmit.co/your@email.com" method="POST">
+                <div class="form-group">
+					 <label for="name">
+						Name
+					</label>
+					<input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required/>
+				</div>
+				<div class="form-group">
+					<label for="email">
+						Email address
+					</label>
+					<input type="email" name="email" class="form-control" id="email" placeholder="example@mail.com" required/>
+				</div>
+                <div class="form-group">
+					<label for="phone">
+						Phone Number
+					</label>
+					<input type="text" name="phone" class="form-control" id="phone" placeholder="phone number" />
+				</div>
+                <div>
+                    <label for="Message" class="for">Message</label>
+                    <textarea name="message" class="form-control" id="message" cols="148" rows="5" placeholder="Write your message here"></textarea>
+                </div>
+				<button type="submit" class="btn btn-primary btn-sub">
+					Submit
+				</button>
+			</form><br>
+			<address>
+				 <strong>Mailing Address:</strong><br /> Regal Medical Services, Inc.<br /> P.O Box 1101<br /> 25 Telser Rd <br /> Lake Zurich, IL 60047-1510.<br />
+		</div>
+	</div>
+</div>
+<footer>
+    <div class="container-fluid contain">
+        <div class="row footer-cs">
+            <div class="col-md-4 text-foot">
+                <div class="row">
+                    <div class="col-md-2">
+                        <i class="fa-solid fa-square-phone"></i>
+                    </div>
+                    <div class="col-md-10">
+                        <p class="foot">
+                            T: (224) 858-3056<br> T: (707) 602-RMED
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 text-foot">
+                <div class="row">
+                    <div class="col-md-2">
+                        <i class="fa-regular fa-envelope"></i>
+                    </div>
+                    <div class="col-md-10">
+                        <p class="foot">
+                            Contact<br> <a href="mailto:info@rmedservices.com" class="mail" target="_blank">info@rmedservices.com</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 text-foot">
+                <div class="row">
+                    <div class="col-md-2">
+                        <i class="fa-regular fa-copyright"></i>
+                    </div>
+                    <div class="col-md-10">
+                        <p class="foot">
+                            &copy; 2022 by<br> RMS, lnc
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
