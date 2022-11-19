@@ -51,35 +51,60 @@
 			<p class="paragr">
 				Every client is linked up with a dedicated account manager. Your account manager will look after all your equipment needs and more. When service need arises your team can always reach your own RMS account manager who is completely aware of your equipment and the environment to dispatch the right personal in shortest response time.
 			</p>
-			<form role="form" action="https://formsubmit.co/your@email.com" method="POST">
-                <div class="form-group">
-					 <label for="name">
-						Name
-					</label>
-					<input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required/>
-				</div>
-				<div class="form-group">
-					<label for="email">
-						Email address
-					</label>
-					<input type="email" name="email" class="form-control" id="email" placeholder="example@mail.com" required/>
-				</div>
-                <div class="form-group">
-					<label for="phone">
-						Phone Number
-					</label>
-					<input type="text" name="phone" class="form-control" id="phone" placeholder="phone number" />
-				</div>
-                <div>
-                    <label for="Message" class="for">Message</label>
-                    <textarea name="message" class="form-control" id="message" cols="148" rows="5" placeholder="Write your message here"></textarea>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <form role="form" onsubmit="sendEmail(); reset(); return false;">
+                                    <div class="form-group col-md-4 service-select">
+                                        <label for="inputState">Select our services</label>
+                                        <select id="inputState" name="inputState" class="form-control">
+                                          <option selected>MRI</option>
+                                          <option>CT</option>
+                                          <option>XRay</option>
+                                          <option>Ultrasound</option>
+                                          <option>Dexa</option>
+                                          <option>CArm</option>
+                                          <option>Cathlab/vascular</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="name">
+                                            Name
+                                        </label>
+                                        <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required/>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="email">
+                                            Email address
+                                        </label>
+                                        <input type="email" name="email" class="form-control" id="email" placeholder="example@mail.com" required/>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="phone">
+                                            Phone Number
+                                        </label>
+                                        <input type="text" name="phone" class="form-control" id="phone" placeholder="phone number" />
+                                    </div>
+                                    <div>
+                                        <label for="Message" class="for">Message</label>
+                                        <textarea name="message" class="form-control" id="message" cols="148" rows="5" placeholder="Write your message here"></textarea>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary btn-sub">
+                                        Submit
+                                    </button>
+                                </form><br>
+                            </div>
+                            <div class="col-md-4">
+                                <img alt="Bootstrap Image Preview" class="cust-img" src="images/customer.jpg" />   
+                            </div>
+                        </div>
+                    </div>
                 </div>
-				<button type="submit" class="btn btn-primary btn-sub">
-					Submit
-				</button>
-			</form><br>
+            </div>
 			<address>
-				 <strong>Mailing Address:</strong><br /> Regal Medical Services, Inc.<br /> P.O Box 1101<br /> 25 Telser Rd <br /> Lake Zurich, IL 60047-1510.<br />
+				 <strong>Mailing Address:</strong><br /> Regal Medical Services, Inc.<br /> 67-17-4D,<br /> Nagamallithota Road, <br /> Beside vennela Residency, <br />Kakinada.<br />Pincode: 533003.<br />
 		</div>
 	</div>
 </div>
@@ -124,6 +149,26 @@
             </div>
         </div>
     </div>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function sendEmail(){
+            Email.send({
+                Host : "smtp.gmail.com",
+                Username : "example@mail.com",
+                Password : "password",
+                To : 'example@mail.com',
+                From : document.getElementById("email").value,
+                Subject : "New contact form enquiry",
+                Body : "InputState: " + document.getElementById("inputState").value
+                    + "<br> Name: " + document.getElementById("name").value
+                    + "<br> Email: " + document.getElementById("email").value
+                    + "<br> Phone number: " + document.getElementById("phone").value
+                    + "<br> Message: " + document.getElementById("message").value
+            }).then(
+            message => alert("Message sent successfully")
+            );
+        }
+    </script>
 </footer>
 </body>
 </html>

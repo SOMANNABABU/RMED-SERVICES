@@ -112,7 +112,7 @@ nav a:hover{
 /* index start here */
 .carousel-inner img {
     width: 100%;
-    height: 80vh;
+    height: 90vh;
     padding: 0;
     margin: 0;
   }
@@ -128,6 +128,7 @@ nav a:hover{
     color: #fff;
     font-family: 'PT Sans', Roboto, sans-serif, serif;
     background-color: #2f3640;
+    border-radius: 5px;
 }
 /* .conta{
     margin-top: -20px;
@@ -174,6 +175,7 @@ nav a:hover{
     position: relative;
     width: 70%;
     height: 60%;
+    border-radius: 5px;
     /* opacity: 5; */
 }
 .about-para{
@@ -188,22 +190,27 @@ nav a:hover{
     .card-st{
         margin: 12px 0 12px 0;
     }
+    .carousel-inner img {
+        width: 100%;
+        height: 60vh;
+        padding: 0;
+        margin: 0;
+      }
   }
 @media screen and (min-width: 400px) and (max-width: 600px){
     .contain{
         margin-top: -125px;
     }
-    .fa-square-phone, .fa-envelope, .fa-copyright{
-        color:#fff;
-        font-size: 35px;
-        float: right;
-        margin-top: 10px;
-    }
     .card-st{
         margin: 16px 0 16px 0;
     }
+    .carousel-inner img {
+        width: 100%;
+        height: 60vh;
+        padding: 0;
+        margin: 0;
+      }    
   }
-  
 @media screen and (min-width: 600px) {
     .contain{
         margin-top: -80px;
@@ -248,6 +255,14 @@ nav a:hover{
 .btn-sub{
     margin-top: 5px;
 }
+.cust-img{
+    width: 100%;
+    height: 90%;
+    border-radius: 5px;
+}
+.service-select{
+    margin-left: -15px;
+}
 /* footer starts here */
 footer{
     position: relative;
@@ -281,13 +296,16 @@ footer{
     text-decoration: none;
     color: #fff;
 }
+.fa-square-phone, .fa-envelope, .fa-copyright{
+    color:#fff;
+    font-size: 35px;
+}
 /* media queiries starts here*/
 @media screen and (min-width: 400px) and (max-width: 550px){
     .fa-square-phone, .fa-envelope, .fa-copyright{
         color:#fff;
         font-size: 35px;
-        float: right;
-        margin-top: 10px;
+        float: left;
     }
     .mri{
         margin-top: -100px;
@@ -297,14 +315,5 @@ footer{
     .fa-square-phone, .fa-envelope, .fa-copyright{
         color:#fff;
         font-size: 35px;
-    }
-  }
-/* media queiries starts here*/
-@media screen and (min-width: 400px){
-    .fa-square-phone, .fa-envelope, .fa-copyright{
-        color:#fff;
-        font-size: 35px;
-        float: right;
-        margin-top: 5px;
     }
   }
